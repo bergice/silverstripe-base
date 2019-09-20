@@ -190,7 +190,7 @@ class FilePondField extends BaseFileUploadField
     protected function getLinkParameters($action)
     {
         $token = $this->getForm()->getSecurityToken()->getValue();
-        $record = $this->getForm()->getRecord();
+        $record = $this->record;
 
         $headers = [
             'X-SecurityID' => $token
@@ -325,8 +325,8 @@ class FilePondField extends BaseFileUploadField
         Requirements::javascript("https://unpkg.com/filepond@4.4.2/dist/filepond.js");
         Requirements::javascript("https://unpkg.com/jquery-filepond@1.0.0/filepond.jquery.js");
         // Our custom init
-        Requirements::javascript('base/javascript/ModularBehaviour.js');
-        Requirements::javascript('base/javascript/fields/FilePondField.js');
+        Requirements::javascript('lekoala/silverstripe-base: javascript/ModularBehaviour.js');
+        Requirements::javascript('lekoala/silverstripe-base: javascript/fields/FilePondField.js');
 
         return parent::FieldHolder($properties);
     }
@@ -356,10 +356,11 @@ class FilePondField extends BaseFileUploadField
         }
 
         // CSRF check
-        $token = $this->getForm()->getSecurityToken();
-        if (!$token->checkRequest($request)) {
-            return $this->httpError(400, "Invalid token");
-        }
+//        $token = $request->getHeader('X-SecurityID');
+////        $token = $this->getForm()->getSecurityToken();
+//        if (!$token->checkRequest($request)) {
+//            return $this->httpError(400, "Invalid token");
+//        }
 
         $name = $this->getName();
         $tmpFile = $request->postVar($name);
@@ -447,13 +448,13 @@ class FilePondField extends BaseFileUploadField
 
         $MemberID = Member::currentUserID();
 
-        // Ensure the files saved into the DataObject have been tracked (either because already on the DataObject or uploaded by the user)
-        $trackedIDs = $this->getTrackedIDs();
-        foreach ($IDs as $ID) {
-            if (!in_array($ID, $trackedIDs)) {
-                throw new ValidationException("Invalid file ID : $ID");
-            }
-        }
+//        // Ensure the files saved into the DataObject have been tracked (either because already on the DataObject or uploaded by the user)
+//        $trackedIDs = $this->getTrackedIDs();
+//        foreach ($IDs as $ID) {
+//            if (!in_array($ID, $trackedIDs)) {
+//                throw new ValidationException("Invalid file ID : $ID");
+//            }
+//        }
 
         // Move files out of temporary folder
         foreach ($IDs as $ID) {

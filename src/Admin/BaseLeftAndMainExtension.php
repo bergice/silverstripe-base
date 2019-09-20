@@ -89,7 +89,7 @@ class BaseLeftAndMainExtension extends LeftAndMainExtension
             Requirements::css('base/css/admin-dark.css');
         }
 
-        Requirements::javascript("base/javascript/admin.js");
+        Requirements::themedJavascript("javascript/admin.js");
         $this->requireAdminStyles();
     }
 

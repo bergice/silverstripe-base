@@ -6,7 +6,7 @@ SilverStripe\CMS\Model\SiteTree:
   page_title_separator: '|'
 SilverStripe\Admin\LeftAndMain:
   extra_requirements_css:
-    - 'base/css/admin.css'
+    - 'lekoala/silverstripe-base:css/admin.css'
   extensions:
     - LeKoala\Base\Admin\BaseLeftAndMainExtension
     - LeKoala\Base\Blocks\BlocksLeftAndMainExtension
