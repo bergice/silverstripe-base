@@ -58,7 +58,7 @@ class FineUploadField extends UploadField
                 throw new Exception("Layout $layout is not supported");
         }
         Requirements::javascript("https://cdnjs.cloudflare.com/ajax/libs/file-uploader/$version/fine-uploader.min.js");
-        Requirements::javascript("base/javascript/fields/FineUploadField.js");
+        Requirements::javascript("javascript/fields/FineUploadField.js");
 
         return parent::Field($properties);
     }

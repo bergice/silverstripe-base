@@ -75,8 +75,8 @@ class AgGridField extends JsonFormField
         Requirements::css('https://unpkg.com/ag-grid/dist/styles/ag-grid.css');
         Requirements::css('https://unpkg.com/ag-grid/dist/styles/' . $theme . '.css');
 
-        Requirements::javascript('base/javascript/ModularBehaviour.js');
-        Requirements::javascript('base/javascript/fields/AgGridField.js');
+        Requirements::javascript('lekoala/silverstripe-base:javascript/ModularBehaviour.js');
+        Requirements::javascript('lekoala/silverstripe-base:javascript/fields/AgGridField.js');
     }
 
     /**

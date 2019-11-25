@@ -165,8 +165,8 @@ class BaseForm extends Form
     protected function enableJsValidation()
     {
         $this->setAttribute("data-module", "RequiredFields");
-        Requirements::javascript("base/javascript/ModularBehaviour.js");
-        Requirements::javascript("base/javascript/RequiredFields.js");
+        Requirements::javascript("javascript/ModularBehaviour.js");
+        Requirements::javascript("javascript/RequiredFields.js");
     }
 
     /**

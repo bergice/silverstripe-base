@@ -221,7 +221,7 @@ class FullGridFieldCheckbox implements GridField_SaveHandler, GridField_ColumnPr
     public function getHTMLFragments($gridField)
     {
         Requirements::css('base/css/FullGridField.css');
-        Requirements::javascript('base/javascript/FullGridField.js');
+        Requirements::javascript('lekoala/silverstripe-base:javascript/FullGridField.js');
     }
 
     /**

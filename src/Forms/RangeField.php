@@ -56,6 +56,6 @@ class RangeField extends TextField
         $version = self::config()->version;
         Requirements::css("https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/$version/rangeslider.min.css");
         Requirements::javascript("https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/$version/rangeslider.min.js");
-        Requirements::javascript('base/javascript/ModularBehaviour.js');
+        Requirements::javascript('lekoala/silverstripe-base:javascript/ModularBehaviour.js');
     }
 }

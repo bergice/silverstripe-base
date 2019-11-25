@@ -550,8 +550,8 @@ class FlatpickrField extends TextField
         if ($theme) {
             Requirements::css("$cdnBase/themes/$theme.css");
         }
-        Requirements::javascript('base/javascript/ModularBehaviour.js');
-        Requirements::javascript('base/javascript/fields/FlatpickrField.js');
+        Requirements::javascript('lekoala/silverstripe-base:javascript/ModularBehaviour.js');
+        Requirements::javascript('lekoala/silverstripe-base:javascript/fields/FlatpickrField.js');
     }
 
     /**

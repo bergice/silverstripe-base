@@ -162,7 +162,7 @@ class CommonRequirements
      */
     public static function modularBehaviour()
     {
-        Requirements::javascript("base/javascript/ModularBehaviour.js");
+        Requirements::javascript("javascript/ModularBehaviour.js");
     }
 
     /**
@@ -304,7 +304,7 @@ class CommonRequirements
      */
     public static function utils()
     {
-        Requirements::javascript("base/javascript/utils.js");
+        Requirements::javascript("javascript/utils.js");
     }
 
     /**
@@ -314,8 +314,8 @@ class CommonRequirements
      */
     public static function canvi()
     {
-        Requirements::css("base/javascript/vendor/canvi/canvi.css");
-        Requirements::javascript("base/javascript/vendor/canvi/canvi.min.js");
+        Requirements::css("javascript/vendor/canvi/canvi.css");
+        Requirements::javascript("javascript/vendor/canvi/canvi.min.js");
     }
 
     /**

@@ -112,7 +112,7 @@ class ColorField extends TextField
         Requirements::javascript("https://cdnjs.cloudflare.com/ajax/libs/spectrum/$version/spectrum.min.js");
         if ($lang != 'en') {
         }
-        Requirements::javascript('base/javascript/ModularBehaviour.js');
+        Requirements::javascript('lekoala/silverstripe-base:javascript/ModularBehaviour.js');
 
         return parent::Field($properties);
     }

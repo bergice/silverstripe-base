@@ -439,8 +439,8 @@ trait Select2
         if ($lang != 'en') {
             Requirements::javascript("https://cdnjs.cloudflare.com/ajax/libs/select2/$version/js/i18n/$lang.js");
         }
-        Requirements::javascript('base/javascript/ModularBehaviour.js');
-        Requirements::javascript('base/javascript/fields/Select2Field.js');
+        Requirements::javascript('lekoala/silverstripe-base:javascript/ModularBehaviour.js');
+        Requirements::javascript('lekoala/silverstripe-base:javascript/fields/Select2Field.js');
         return parent::Field($properties);
     }
 

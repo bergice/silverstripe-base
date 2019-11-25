@@ -17,7 +17,7 @@ class JsRequiredFields extends RequiredFields
     {
         parent::__construct();
 
-        Requirements::javascript("base/javascript/ModularBehaviour.js");
-        Requirements::javascript("base/javascript/RequiredFields.js");
+        Requirements::javascript("javascript/ModularBehaviour.js");
+        Requirements::javascript("javascript/RequiredFields.js");
     }
 }
