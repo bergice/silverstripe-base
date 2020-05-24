@@ -162,7 +162,6 @@ class BasePageExtension extends DataExtension
         if ($sourceObject->hasMethod('getShareTitle')) {
             $shareTitle = $sourceObject->getShareTitle();
         }
-        $tags = '';
         // OpenGraph
         $tags .= "\n<!-- OpenGraph Meta Tags -->\n";
         // og:type
